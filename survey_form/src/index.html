@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - FCC: Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1 id="title" class="text-center">Corona Virus Pandemic Form</h1>
+        <figure>
+            <img src="corona.jpg" alt="corona Virus">
+            <figcaption>The corona virus</figcaption>
+        </figure>
+        <p id="description" class="description text-center">
+            Please! Fill the form to help us fighting the corona virus pandemic
+        </p>
+    </header>
+
+    <main id="main">
+        <form action="" id="survey-form">
+            <div class="form-group form-inline">
+                <label id="name-label" for="name">First name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your first name"
+                       required/>
+                <label id="last-name-label" for="last_name">Last name</label>
+                <input type="text" name="name" id="last_name" class="form-control" placeholder="Enter your last name"
+                       required/>
+            </div>
+            <div class="form-group">
+                <label id="phone-label" for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Enter your Phone number"
+                       required/>
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age</label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age"
+                       required/>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email<span class="clue">(optional)</span></label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email"
+                       required/>
+            </div>
+            <div class="form-group">
+                <label id="origin-country-label" for="origin-country">Country of origin</label>
+                <input type="text" name="origin-country" id="origin-country" class="form-control"
+                       placeholder="Enter your country of origin" required/>
+            </div>
+            <div class="form-group">
+                <label id="country-label" for="origin-country">Country</label>
+                <input type="text" name="country" id="country" class="form-control"
+                       placeholder="Enter your country" required/>
+            </div>
+            <div class="form-group">
+                <label id="locality-label" for="locality">Locality</label>
+                <input type="text" name="locality" id="locality" class="form-control"
+                       placeholder="Enter your locality" required/>
+            </div>
+            <div class="form-group">
+                <p>Which option best describes your current role?</p>
+                <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full Time Job</option>
+                    <option value="learner">Full Time Learner</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>Did you visit a country or an area with high level of contamination?</p>
+                <label> <input name="user-recommend" value="definitely" type="radio" class="input-radio"
+                               checked/>Yes</label>
+                <label> <input name="user-recommend" value="maybe" type="radio" class="input-radio"/>No</label>
+                <label> <input name="user-recommend" value="not-sure" type="radio" class="input-radio"/>Not sure</label>
+            </div>
+
+            <div class="form-group">
+                <p> Check all that apply</p>
+                <label>
+                    <input name="prefer" value="cov2" type="checkbox" class="input-checkbox"/>Do you live
+                    in an area where there are persons suffering from SARS-CoV2 (COVID-19)?</label>
+                <label>
+                    <input name="prefer" value="contact-with-cov2" type="checkbox" class="input-checkbox"/> Have you
+                    been in contact with someone suffering from SARS-CoV2 (COVID-19) at home, job, in your
+                    neighbourhood or while visiting a hospital or other places in the last 14 days?</label>
+                <label>
+                    <input name="prefer" value="hospitalized" type="checkbox" class="input-checkbox"/> Have you
+                    been hospitalized in the last 3 weeks?</label>
+                <label>
+                    <input name="prefer" value="swallowing" type="checkbox" class="input-checkbox"/> Have you
+                    experienced any difficulty of swallowing?
+                </label>
+
+                <label><input name="prefer" value="breathing" type="checkbox" class="input-checkbox"/> Have
+                    you experienced any difficulty of breathing?
+                </label>
+                <label>
+                    <input name="prefer" value="coughing" type="checkbox" class="input-checkbox"/>Have you
+                    experienced intense coughing?
+                </label>
+
+                <div class="form-group">
+                    <p>
+                        Ho can you help fighting against this pandemic?
+                    </p>
+                    <select id="most-like" name="mostLike" class="form-control" required>
+                        <option disabled selected value>Select an option</option>
+                        <option value="health-care">I work in health care and I can help in medication</option>
+                        <option value="volunteer">I can volunteer to help and assist old and sick people</option>
+                        <option value="respect-rules">I can't but I will respect the rules of lock down</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Any Comments?</label>
+                    <textarea id="comments" class="input-textarea" name="comment"
+                              placeholder="Enter your comment here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">
+                        Submit
+                    </button>
+                </div>
+        </form>
+    </main>
+</div>
+<footer>
+    <h3>For more information please visit the <a href="http://who.com/" target="_blank">WHO website</a></h3>
+</footer>
+
+<script src="../../bundle/bundle.js"></script>
+<!--<script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="script.js"></script>-->
+<script src="script.js"></script>
+</body>
+</html>
