@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    --fw-regular: 300;
+    --fw-bold: 900;
+
+    --color-light: #fff;
+    --color-dark: #303030;
+    --color-accent: #16e0bd;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-text: 1rem;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-text: 1.125rem;
+    }
+}
+
+/* General styles */
+
+body {
+    background: var(--color-light);
+    color: var(--color-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-text);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    margin: 0;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+strong {
+    font-weight: var(--fw-bold);
+}
+
+.section__title {
+    margin-bottom: 0.25em;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__title--intro {
+    font-weight: var(--fw-regular);
+
+}
+
+.section__subtitle--intro strong {
+    display: block;
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--color-accent);
+    font-family: var(--ff-secondary);
+}
