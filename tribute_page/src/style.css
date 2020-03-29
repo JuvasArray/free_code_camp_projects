@@ -1,39 +1,67 @@
-
-html {
-    font-size: 10px;
+/* Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Gotu', sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    text-align: center;
-    color: #333;
-    margin: 0;
+:root {
+    --ff-primary: 'Gotu', sans-serif;
+    --ff-secondary: 'Goto', monospace;
+
+    --fw-regular: 300;
+    --fw-bold: 600;
+
+    --color-light: #fff;
+    --color-dark: #303030;
+    --color-accent: #16e0bd;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-text: 1.1rem;
 }
 
-h1 {
-    font-size: 4rem;
-    margin-bottom: 0;
-}
 
-time {
-    font-weight: bold;
-}
-
-@media (max-width: 460px) {
-    h1 {
-        font-size: 3.5rem;
-        line-height: 1.2;
+@media (min-width: 400px) {
+    :root {
+        --fs-h1: 4rem;
+        --gs-h2: 1.5rem;
+        --fs-text: 1.2rem;
     }
 }
 
+body {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    color: var(--color-dark);
+    line-height: 1.6;
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h1);
+}
+
 h2 {
-    font-size: 3.25rem;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h2);
+}
+
+time {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-text);
+}
+
+p {
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-text);
 }
 
 a {
     text-decoration: none;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-text);
     color: #477ca7;
 }
 
